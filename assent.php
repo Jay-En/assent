@@ -210,7 +210,7 @@ Class assent{
 					fclose($myfile);
 				}
 			}
-
+ 
 
 			return $code;
 
