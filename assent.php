@@ -63,7 +63,7 @@ Class assent{
 
 				$json_file['template'] = $template;
 
-				$myfile = fopen($lang_path, "w") or die("Unable to open file!");
+				$myfile = fopen($lang_path, "w");
 				$txt = json_encode($json_file, JSON_PRETTY_PRINT);
 
 				fwrite($myfile, $txt);
@@ -204,7 +204,7 @@ Class assent{
 				if(!isset($result['codes'][$code])){
 
 					$result['codes'][$code] = $message;
-					$myfile = fopen($lang_path, "w") or die("Unable to open file!");
+					$myfile = fopen($lang_path, "w");
 					$txt = json_encode($result, JSON_PRETTY_PRINT);
 					fwrite($myfile, $txt);
 					fclose($myfile);
@@ -235,7 +235,7 @@ Class assent{
 				}
 				$result['codes'][$code] = $message;
 
-				$myfile = fopen($lang_path, "w") or die("Unable to open file!");
+				$myfile = fopen($lang_path, "w");
 				$txt = json_encode($result, JSON_PRETTY_PRINT);
 				fwrite($myfile, $txt);
 				fclose($myfile);
